@@ -4,31 +4,36 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Heart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const slides = [
+  "/lovable-uploads/b4bb5004-dc38-4b72-9c90-0d755dd22bcc.png",
+  "/lovable-uploads/6d1580a7-44ea-4995-9589-3fe50e6c2959.png",
+  "/lovable-uploads/7bbd3d89-6c04-4384-a3d9-e8a275508c2a.png",
+  "/lovable-uploads/3e08c1e1-dee0-46b7-95a7-3c5adb2c2732.png",
+];
+
 const services = [
   {
     title: "Wedding Decoration",
-    description: "Transform your special day with our elegant wedding decorations.",
+    description: "Transform your special day with our elegant wedding decorations and creative setups.",
     icon: Heart,
+    image: "/lovable-uploads/51671196-cf26-4508-9c87-6b11adbde5bd.png"
   },
   {
     title: "Reception Setup",
-    description: "Create memorable moments with our stunning reception setups.",
+    description: "Create memorable moments with our stunning reception setups and backdrops.",
     icon: Users,
+    image: "/lovable-uploads/b771b26d-4eb6-4b3c-ae6a-774c99f654bb.png"
   },
   {
     title: "Event Planning",
-    description: "Let us handle the details while you enjoy your celebration.",
+    description: "Let us handle all the details while you enjoy your celebration.",
     icon: Calendar,
+    image: "/lovable-uploads/f05fe34f-26b0-4701-97b6-136c3b5a0ad5.png"
   },
 ];
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    "/wedding1.jpg",
-    "/reception1.jpg",
-    "/sangeet1.jpg",
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -109,11 +114,22 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               >
-                <service.icon className="w-12 h-12 text-gold mb-6" />
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <div className="flex items-center gap-3 mb-4">
+                    <service.icon className="w-6 h-6 text-gold" />
+                    <h3 className="text-xl font-semibold">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -123,6 +139,51 @@ const Index = () => {
               className="inline-flex items-center text-gold hover:text-gold-dark"
             >
               View All Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Work Gallery */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair text-gray-900 mb-4">
+              Recent Works
+            </h2>
+            <div className="w-24 h-1 bg-gold mx-auto" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "/lovable-uploads/9873ee97-206a-471c-aef5-82280c477924.png",
+              "/lovable-uploads/e954d4c6-48bb-4bc6-9b0b-ae64fa4e63f9.png",
+              "/lovable-uploads/a1d975ac-e381-437f-a3d7-123d7d4e0e20.png",
+            ].map((image, index) => (
+              <motion.div
+                key={image}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={image}
+                    alt="Event decoration"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center px-8 py-3 bg-gold hover:bg-gold-dark text-white rounded-full transition-colors"
+            >
+              View Full Gallery
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
