@@ -3,15 +3,23 @@ import { motion } from "framer-motion";
 
 const Gallery = () => {
   const images = [
-    "/lovable-uploads/bfa69b1e-e72e-4838-97ca-4be8483a2c0a.png",
-    "/lovable-uploads/ba6a5b82-21e6-4c8a-ba26-228ed167a58f.png",
-    "/lovable-uploads/353e7571-b6ea-4f92-9b1e-77c88d12d195.png",
-    "/lovable-uploads/0b37e406-ad06-42bd-896d-d6386df99e28.png",
-    "/lovable-uploads/88871474-0f2a-4023-89ab-6854ae8544ad.png",
-    "/lovable-uploads/24324590-8d2c-493f-b95b-bbc298e81b0b.png",
-    "/lovable-uploads/3f8ce3dc-d345-4ebf-8003-02270d8e0537.png",
-    "/lovable-uploads/68fd9b3f-eda9-49ff-9b96-e0558ba883cd.png",
-    "/lovable-uploads/62c4f3b2-e605-495c-b524-8cbdeda860b0.png",
+    "/lovable-uploads/3d8ce9bd-09fc-4705-9a4b-bffbda926f7f.png",
+    "/lovable-uploads/2a552d65-3b3f-43c3-af4a-d2e70a6ad35a.png",
+    "/lovable-uploads/0d19332c-5fc8-48b1-8010-a3807462a92f.png",
+    "/lovable-uploads/8ca4ee82-509d-45de-95d1-1f7323c88587.png",
+    "/lovable-uploads/9871001c-f0f7-477e-9dac-daf4415f8f9d.png",
+    "/lovable-uploads/bcec5f95-dea0-459f-9a5a-ae9e5f86f69f.png",
+    "/lovable-uploads/6f1fa905-ed82-435c-9caf-2936a836672e.png",
+    "/lovable-uploads/3207f81d-3c36-4ca2-a14c-bc0adbf5faa4.png",
+    "/lovable-uploads/92c557a9-50cc-4eb5-9f5a-2e31d39ad464.png",
+    "/lovable-uploads/f846d181-496e-449e-82c1-2ce155ea0531.png",
+    "/lovable-uploads/41b7b32b-76fc-4b2a-9881-28cc9c4aa229.png",
+    "/lovable-uploads/e6ba18c9-d0c1-4316-b7c6-8927b4e9b305.png",
+    "/lovable-uploads/8e5a6e98-0649-4bf6-b928-30d29b472555.png",
+    "/lovable-uploads/7f5237fe-be88-4553-b210-e800f5b93c6b.png",
+    "/lovable-uploads/02703083-6cc7-481f-baf7-755a852a31eb.png",
+    "/lovable-uploads/0a4b5631-2be7-44be-adcb-efecf9ca444c.png",
+    "/lovable-uploads/0c373bd2-3da9-488c-a86e-24617fcf9785.png"
   ];
 
   return (
@@ -22,7 +30,7 @@ const Gallery = () => {
             Our Gallery
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Browse through our collection of stunning event decorations and setups that showcase our dedication to creating magical moments.
+            Browse through our collection of stunning birthday celebrations, themed events, and creative balloon decorations that showcase our dedication to creating magical moments.
           </p>
           <div className="w-24 h-1 bg-gold mx-auto mt-8" />
         </div>

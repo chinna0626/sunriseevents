@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Heart, Users } from "lucide-react";
@@ -30,6 +29,12 @@ const services = [
     icon: Calendar,
     image: "/lovable-uploads/f05fe34f-26b0-4701-97b6-136c3b5a0ad5.png"
   },
+];
+
+const recentWorks = [
+  "/lovable-uploads/3d8ce9bd-09fc-4705-9a4b-bffbda926f7f.png",
+  "/lovable-uploads/2a552d65-3b3f-43c3-af4a-d2e70a6ad35a.png",
+  "/lovable-uploads/0d19332c-5fc8-48b1-8010-a3807462a92f.png",
 ];
 
 const Index = () => {
@@ -155,11 +160,7 @@ const Index = () => {
             <div className="w-24 h-1 bg-gold mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "/lovable-uploads/9873ee97-206a-471c-aef5-82280c477924.png",
-              "/lovable-uploads/e954d4c6-48bb-4bc6-9b0b-ae64fa4e63f9.png",
-              "/lovable-uploads/a1d975ac-e381-437f-a3d7-123d7d4e0e20.png",
-            ].map((image, index) => (
+            {recentWorks.map((image, index) => (
               <motion.div
                 key={image}
                 initial={{ opacity: 0, y: 20 }}
