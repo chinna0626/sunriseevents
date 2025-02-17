@@ -37,9 +37,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="text-2xl font-semibold text-gold hover:text-gold-dark transition-colors"
+            className="flex items-center hover:opacity-90 transition-opacity"
           >
-            Sunrise Events
+            <img 
+              src="/lovable-uploads/bde85e7d-7e0c-4bc9-b154-6d26e80b7c82.png" 
+              alt="Sunrise Events" 
+              className="h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
